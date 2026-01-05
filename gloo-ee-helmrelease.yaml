@@ -5,10 +5,8 @@ metadata:
   namespace: kube-gloo-system
 spec:
   interval: 1m
-
   driftDetection:
     mode: disabled
-
   chart:
     spec:
       chart: gloo
@@ -17,10 +15,16 @@ spec:
         kind: HelmRepository
         name: solo-io
         namespace: flux-system
-
+  values:
+    gatewayProxies:
+      gateway-proxy:
+        resources:
+          requests:
+            cpu: 100m
+          limits:
+            cpu: 500m
   install:
     createNamespace: true
-
   upgrade:
     disableWait: true
 
