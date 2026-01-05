@@ -9,7 +9,7 @@ spec:
     mode: disabled
   chart:
     spec:
-      chart: gloo
+      chart: gloo-ee
       version: "1.16.0"
       sourceRef:
         kind: HelmRepository
