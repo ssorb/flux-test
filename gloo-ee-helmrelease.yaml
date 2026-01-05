@@ -11,7 +11,7 @@ spec:
 
   chart:
     spec:
-      chart: gloo-ee
+      chart: gloo
       version: "1.16.0"
       sourceRef:
         kind: HelmRepository
